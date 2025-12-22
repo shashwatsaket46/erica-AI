@@ -1,0 +1,9 @@
+{
+  "concept_extraction": "Extract domain-relevant concepts, terms, or noun phrases from the text. These must be **explicitly present** in the text (or obvious subphrases). Include technical terms, domain concepts, named entities, multi-word concepts, or important actions. DO NOT hallucinate concepts that are not present. DO NOT output generic words like 'concept', 'idea', 'principle', 'thing', 'object', 'field', 'energy', 'interaction', 'complexity'.\n\nReturn ONLY a JSON array of strings.\n\nTEXT:\n{{text}}",
+
+  "definition_extraction": "Extract ALL definitions from the text.\nA definition is when the text clearly explains what something IS, DOES, or MEANS.\n\nRewrite unclear definitions into clean 1–3 sentence definitions.\nDo NOT output instructions or meta-text as definitions.\nOnly extract definitions of actual concepts mentioned in the text.\n\nReturn ONLY a JSON list of objects:\n[\n  {\"concept\": \"Concept Name\", \"definition\": \"Clear definition (1–3 sentences).\"}\n]\n\nTEXT:\n{{text}}",
+
+  "prerequisite_extraction": "Extract prerequisite relationships between concepts mentioned in the text. A prerequisite means: understanding Concept A is required or helpful before understanding Concept B.\n\nONLY use concepts that actually appear in the text. DO NOT invent external topics.\n\nReturn ONLY a JSON list:\n[\n  {\"source\": \"Concept A\", \"target\": \"Concept B\"}\n]\n\nTEXT:\n{{text}}",
+
+  "example_extraction": "Extract ALL examples, illustrations, sample cases, analogies, or demonstrations from the text.\n\nAn example may be:\n- a numerical example\n- a scenario\n- a real-world illustration\n- a thought experiment\n- an analogy or simplified explanation\n\nReturn ONLY a JSON list of objects:\n[\n  {\"concept\": \"Concept Name\", \"example_text\": \"The example text (1–4 sentences).\"}\n]\n\nTEXT:\n{{text}}"
+}

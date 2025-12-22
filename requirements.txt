@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+requests
+networkx
+pymupdf
+beautifulsoup4
+python-multipart
+pdfplumber
+neo4j
+httpx
+youtube-transcript-api
+pydantic
+chromadb

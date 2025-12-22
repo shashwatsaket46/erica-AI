@@ -1,0 +1,53 @@
+services:
+  api:
+    build: .
+    container_name: erica_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    environment:
+      OLLAMA_HOST: "http://host.docker.internal:11434"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+      
+  neo4j:
+    image: neo4j:5.17
+    container_name: neo4j
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_dbms_security_procedures_unrestricted=gds.*,apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=gds.*,apoc.*
+      - NEO4J_server_memory_heap_max__size=2G
+      - NEO4J_server_memory_pagecache_size=1G
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+    volumes:
+      - neo4j_data:/data
+      - ./neo4j/plugins:/plugins
+
+  ui:
+    build:
+      context: ./erica-ui
+      dockerfile: Dockerfile
+    container_name: erica_ui
+    ports:
+      - "5173:5173"
+    working_dir: /app
+    volumes:
+      - ./erica-ui:/app
+      - /app/node_modules           # <-- CRITICAL FIX
+    environment:
+      - ROLLUP_SKIP_NATIVE=true
+      - VITE_BACKEND_URL=http://localhost:8000
+
+
+
+volumes:
+  neo4j_data:
