@@ -35,7 +35,7 @@ The graph build in neo4j looks as follows:
 
 
 
-  Now I will explain each API that I am hosting, just go to this api link: http://localhost:8000/docs#
+  Now in the following section, I will explain each API that I am hosting, just go to this api link for the backend implementation using swagger UI: http://localhost:8000/docs#
 
   This will open swagger-ui page like this:
   <img width="1653" height="864" alt="image" src="https://github.com/user-attachments/assets/06ad9ff9-08a7-441e-80af-aba6290789ea" />
