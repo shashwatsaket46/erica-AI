@@ -38,23 +38,28 @@ The graph build in neo4j looks as follows:
   Now I will explain each API that I am hosting, just go to this api link: http://localhost:8000/docs#
 
   This will open swagger-ui page like this:
-  <img width="1850" height="973" alt="image" src="https://github.com/user-attachments/assets/841a2d66-9adb-4047-9fc6-044cb969259c" />
+  <img width="1653" height="864" alt="image" src="https://github.com/user-attachments/assets/06ad9ff9-08a7-441e-80af-aba6290789ea" />
+
 
   APIs:
 
   1.  /
       Method Get
       Description: This checks if the Erica is running propely.
-      <img width="1471" height="712" alt="image" src="https://github.com/user-attachments/assets/7780333e-f0be-440c-8fb3-651a5ffb5ce0" />
+      <img width="1791" height="867" alt="image" src="https://github.com/user-attachments/assets/0f1bd5cd-7f3e-4a9f-9355-478e7ccb3859" />
+
   2.  /check-llm
       Method Get
       Description: This is a get API which will hit the Ollama and checks if the LLM model is running. Here successful response will show the models and its description.
-      <img width="1731" height="973" alt="image" src="https://github.com/user-attachments/assets/1b71f0d7-91d9-4459-b2f4-f14b84d882a2" />
+      <img width="1541" height="859" alt="image" src="https://github.com/user-attachments/assets/66e9c5f8-4221-45f4-8036-1fb68628f4f0" />
+
   3.  /ingest
       Method Post
       Description: This is an API to accept any website, link, youtube videos, crawling website link and load in our local data/raw folder.
-      <img width="1615" height="787" alt="image" src="https://github.com/user-attachments/assets/7392efbe-657e-457a-ab25-5793736399d3" />
-      <img width="1615" height="968" alt="image" src="https://github.com/user-attachments/assets/f81c0751-0918-4df2-8c75-aa41be5e605e" />
+      <img width="1784" height="864" alt="image" src="https://github.com/user-attachments/assets/9f26d187-de9d-470a-a048-4b3c22c9ff6f" />
+
+      <img width="897" height="538" alt="image" src="https://github.com/user-attachments/assets/4fb5e452-5e28-41d0-a6fc-e648aea12947" />
+
 
   4.  /ingest/chunk
       Method Post
