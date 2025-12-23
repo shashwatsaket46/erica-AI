@@ -1,13 +1,15 @@
 Hello, this is Erica
 
-<img width="1915" height="1027" alt="image" src="https://github.com/user-attachments/assets/40462e14-9730-4781-845e-3266ce8e0af7" />
+<img width="1629" height="867" alt="image" src="https://github.com/user-attachments/assets/0934bccf-ae2a-4677-8ba6-1f192020b88e" />
+
 
 How to RUN:
 
 This project is a full stack project, so we have a backend and ui component.
 Once downloaded, in the root folder, open bash for unix / cmd, powershell for windows.
 After that paste this command -> docker compose up --build -d
-Once it has been build, <img width="1444" height="164" alt="image" src="https://github.com/user-attachments/assets/6cd5cf3f-e1d1-420f-86af-edf576eb2ac7" />
+Once it has been build, <img width="1844" height="207" alt="image" src="https://github.com/user-attachments/assets/aea5b6ae-fbb5-42d5-95b1-ea7336163cbb" />
+
 the above screen will show.
 Then go to http://localhost:5173/ 
 This will open a UI where you can chat and ask questions, and in accordance with the text, it will send the request to /ask api in the backend which will fetch the data.
@@ -19,7 +21,8 @@ The results and answers required as per part of this project is in the folder re
 Now, coming to the folder structure. The UI part and code is ther in erica-ui, the backend code is there in ericaApi which have the main.py which hosts several API that I have discussed below. The folder cortex have all the required backend codes that is being redirected from ericaAPI main.py file.
 
 
-<img width="544" height="505" alt="image" src="https://github.com/user-attachments/assets/7d7df8b7-1ecf-4dd6-8e72-7b8d5b7e051b" />
+<img width="677" height="627" alt="image" src="https://github.com/user-attachments/assets/2f2152fe-5357-47bc-ae04-1a48beefa507" />
+
 
 
 
@@ -27,7 +30,8 @@ I am using Ollama Qwen 2.5:3B model running on my localhost, so this is also req
 
 The graph build in neo4j looks as follows: 
 
-<img width="1919" height="901" alt="image" src="https://github.com/user-attachments/assets/c3902a8c-6075-41e5-9255-d5fbf7c30825" />
+<img width="1854" height="869" alt="image" src="https://github.com/user-attachments/assets/bfb8523d-f867-4b48-8514-481efd0318fa" />
+
 
 
 
